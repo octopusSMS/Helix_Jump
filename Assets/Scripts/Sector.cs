@@ -9,9 +9,12 @@ public class Sector : MonoBehaviour
     public Material BadMaterial;
     public float BreakSpeed;
 
+    private AudioSource _audio;
+
     private void Awake()
     {
-        UpdateMaterial();        
+        UpdateMaterial();     
+        _audio = GetComponent<AudioSource>();
     }
 
     private void UpdateMaterial()
@@ -32,7 +35,10 @@ public class Sector : MonoBehaviour
         if (IsGood)
         {
             if (player.Rigidbody.velocity.y < -BreakSpeed)
+            {
                 DestroySector();
+                _audio.Play();
+            }
             player.Bounce(); 
         }
         else
