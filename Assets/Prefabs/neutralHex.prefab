@@ -130,5 +130,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsGood: 1
   GoodMaterial: {fileID: 2100000, guid: ec747f058349b724eb708bd1cf280b60, type: 2}
-  BadMaterial: {fileID: 2100000, guid: b54cc36916475734f900d69153818b3b, type: 2}
+  BadMaterial: {fileID: 2100000, guid: d96b45e15a577a54c9b692870982a299, type: 2}
   BreakSpeed: 2.3
