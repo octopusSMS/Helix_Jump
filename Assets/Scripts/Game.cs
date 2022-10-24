@@ -21,9 +21,12 @@ public class Game : MonoBehaviour
     public GameObject TextDestroyedPlatforms;
     public GameObject RestartButton;
 
+    private AudioSource _audio;
+
     private void Awake()
     {
         DestroyPlatformNumber = PlayerPrefs.GetInt(DestroyPlatformKey, 0);
+        _audio = GetComponent<AudioSource>();
     }
     public void OnPlayerDied()
     {
@@ -71,5 +74,14 @@ public class Game : MonoBehaviour
     }
     private const string LevelIndexKey = "LevelIndex";
 
-   
+    private void OnEnable()
+    {
+        _audio.Play();
+    }
+    private void OnDisable()
+    {
+        _audio.Stop();
+    }
+
+
 }
