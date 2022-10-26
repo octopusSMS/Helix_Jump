@@ -844,7 +844,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 540, y: 960, z: 0}
+    m_Target: {x: 3.9142709, y: -5.306525, z: 0.78011894}
     speed: 2
     m_Value: {x: 540, y: 960, z: 0}
   m_RenderMode: 0
@@ -893,11 +893,11 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.15118045, y: 0.024310961, z: -0.0037196334, w: -0.98819566}
+    m_Target: {x: -0.17046127, y: -0.011236168, z: 0.0019449849, w: -0.9852956}
     speed: 2
     m_Value: {x: -0.15118046, y: 0.024310961, z: -0.0037196334, w: -0.98819566}
   m_Size:
-    m_Target: 1101.4536
+    m_Target: 11.969575
     speed: 2
     m_Value: 1101.4536
   m_Ortho:
@@ -1024,23 +1024,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 575
-      height: 521
-    m_Scale: {x: 0.28229168, y: 0.28229168}
-    m_Translation: {x: 287.5, y: 260.49997}
+      width: 732
+      height: 791
+    m_Scale: {x: 0.42291668, y: 0.42291668}
+    m_Translation: {x: 366, y: 395.49997}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1018.45013
-      y: -922.80426
-      width: 2036.9003
-      height: 1845.6088
+      x: -865.4187
+      y: -935.1723
+      width: 1730.8374
+      height: 1870.3447
     m_MinimalGUI: 1
-  m_defaultScale: 0.28229168
-  m_LastWindowPixelSize: {x: 575, y: 542}
+  m_defaultScale: 0.42291668
+  m_LastWindowPixelSize: {x: 732, y: 812}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
