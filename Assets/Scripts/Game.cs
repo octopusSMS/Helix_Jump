@@ -23,13 +23,10 @@ public class Game : MonoBehaviour
     public GameObject RestartButton;
 
     public GameObject Player;
-    private ParticleSystem PlayerDieParticles;
 
     private void Awake()
     {
         DestroyPlatformNumber = PlayerPrefs.GetInt(DestroyPlatformKey, 0);
-
-        PlayerDieParticles = Player.GetComponent<ParticleSystem>();
     }
     public void OnPlayerDied()
     {
@@ -41,11 +38,9 @@ public class Game : MonoBehaviour
 
         PlayerPrefs.SetInt(DestroyPlatformKey, 0);
 
-        PlayerDieParticles.Play();
-        //StartCoroutine(WaitBeforeSeconds(2));
-        //Player.SetActive(false);
+        Player.GetComponent<ParticleSystem>().Play(); //запуск системы частиц
+        Destroy(Player.GetComponent<MeshRenderer>()); //отключаем отображение игрока
 
-                
         Slider.SetActive(false);
         TextDestroyedPlatforms.SetActive(false);
         RestartButton.SetActive(true);
@@ -80,10 +75,5 @@ public class Game : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
-    private const string LevelIndexKey = "LevelIndex";
-
-   IEnumerator WaitBeforeSeconds(int _waittime)
-    {
-        yield return new WaitForSeconds(_waittime); 
-    }
+    private const string LevelIndexKey = "LevelIndex";  
 }
