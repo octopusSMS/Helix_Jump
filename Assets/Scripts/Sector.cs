@@ -55,6 +55,9 @@ public class Sector : MonoBehaviour
         Rigidbody.constraints = RigidbodyConstraints.None;
         Rigidbody.useGravity = true;
 
+        //Здесь надо запускать систему частиц
+        GetComponent<ParticleSystem>().Play();
+
         Game Game = FindObjectOfType<Game>();
         Game.DestroyPlatformNumber++;
     }
