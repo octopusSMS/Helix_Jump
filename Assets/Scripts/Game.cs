@@ -23,6 +23,7 @@ public class Game : MonoBehaviour
     public GameObject RestartButton;
 
     public GameObject Player;
+    public ParticleSystem FinishParticle;
 
     private void Awake()
     {
@@ -58,7 +59,10 @@ public class Game : MonoBehaviour
         Debug.Log("You won!");
 
         PlayerPrefs.SetInt(DestroyPlatformKey, DestroyPlatformNumber);
-        ReloadLevel();
+        FinishParticle.Play();
+
+        StartCoroutine(ReloadLevelAfterTime(2f));
+        //ReloadLevel();
     }
 
     public void ReloadLevel()
@@ -76,4 +80,10 @@ public class Game : MonoBehaviour
         }
     }
     private const string LevelIndexKey = "LevelIndex";  
+
+    private IEnumerator ReloadLevelAfterTime(float value)
+    {
+        yield return new WaitForSeconds(value);
+        ReloadLevel();
+    }
 }
